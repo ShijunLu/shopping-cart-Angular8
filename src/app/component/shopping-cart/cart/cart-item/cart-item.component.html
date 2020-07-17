@@ -1,1 +1,9 @@
-<span>Item 1</span>  x <span>4</span>: <strong>{{500 |currency:'USD'}}</strong>
+<div class="cart-item">
+    <span>{{ cartItem.productName }}</span> x 
+    <span>{{ cartItem.qty }}</span>:
+    <strong>{{ (cartItem.qty * cartItem.price) | currency }}</strong>
+    
+    <button type="button" class="btn btn-sm btn-secondary cart-btn">Detail</button>
+    <button type="button" class="btn btn-sm btn-primary cart-btn"(click)="handleAdd()">Add More</button>
+    <button type="button" class="btn btn-sm btn-secondary cart-btn" (click)="handleDelete()">Delete</button>
+</div>

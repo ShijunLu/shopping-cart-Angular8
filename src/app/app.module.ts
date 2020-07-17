@@ -11,7 +11,8 @@ import { FiltersComponent } from './component/shopping-cart/filters/filters.comp
 import { ProductListComponent } from './component/shopping-cart/product-list/product-list.component';
 import { CartItemComponent } from './component/shopping-cart/cart/cart-item/cart-item.component';
 import { ProductItemComponent } from './component/shopping-cart/product-list/product-item/product-item.component';
-
+import { ProductService } from './services/product.service'
+import { MessengerService } from './services/messenger.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { ProductItemComponent } from './component/shopping-cart/product-list/pro
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ProductService, MessengerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
